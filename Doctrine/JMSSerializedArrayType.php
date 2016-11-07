@@ -28,14 +28,14 @@ class JMSSerializedArrayType extends JsonArrayType
             return null;
         }
 
-        return array_map(function($element) {
+        return json_encode(array_map(function($element) {
             $data = $this->serializer->serialize($element, 'json');
 
-            return json_encode([
+            return [
                 'class' => get_class($element),
                 'data' => json_decode($data, true),
-            ]);
-        }, $value);
+            ];
+        }, $value));
     }
 
     /**

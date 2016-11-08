@@ -1,0 +1,22 @@
+{
+    "name": "fervoandfriends/jms-serialized-type-bundle",
+    "description": "Adds json serialized object and array types to Doctrine.",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Magnus Nordlander",
+            "email": "magnus@fervo.se",
+            "homepage": "http://www.fervo.se/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "doctrine/dbal": "^2.5",
+        "symfony/symfony": "~2.8|~3.0",
+        "jms/serializer-bundle": "^1.1"
+    },
+    "autoload": {
+        "psr-4": { "Fervo\\JMSSerializedTypeBundle\\": ""}
+    }
+}
